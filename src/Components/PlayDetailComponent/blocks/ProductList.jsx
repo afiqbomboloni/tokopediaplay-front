@@ -22,12 +22,15 @@ const ProductList= ({products}) =>{
                   src={product.linkProduct}
                   alt=""
                 />
-                <span className="absolute text-sm text-gray-900 bottom-7 left-5">
+                <div>
+                <span className="absolute text-sm text-gray-900 bottom-7 left-5 bg-gray-400 rounded p-0.5">
                   {product.title}
                 </span>
-                <span className="absolute text-xs text-red-900 bottom-3 left-5">
+                <span className="absolute text-xs text-red-900 bottom-3 left-5 bg-orange-200 p-[1px]">
                   Rp. {product.price}
                 </span>
+                </div>
+               
               </a>
             </div>
           </li>

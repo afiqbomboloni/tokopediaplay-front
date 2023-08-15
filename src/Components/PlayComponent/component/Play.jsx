@@ -38,7 +38,7 @@ const Play = () => {
     <div>
       <Navbar />
       <div className="h-full">
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 pl-6">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 pl-6 pr-6">
           {filteredVideos.map((video, index) => (
             <div className="relative" key={index}>
               <Link to={`/play-detail/${video.videoId}`}>
@@ -47,7 +47,15 @@ const Play = () => {
                 src={video.urlImageThumbnail}
                 alt={`Thumbnail ${index + 1}`}
               />
-              <span className="font-semibold md:text-xl text-sm">{video.title}</span>
+              <span className="font-semibold leading-none md:text-xl text-[10px]"
+              style={{
+                display: '-webkit-box',
+                '-webkit-line-clamp': 2,
+                '-webkit-box-orient': 'vertical',
+                overflow: 'hidden',
+                lineHeight: '1.2',
+              }}
+              >{video.title}</span>
               </Link>
               <span className="absolute top-3 left-3 md:text-xs text-[10px] font-medium mr-2 md:px-2.5 md:py-0.5 px-1 py-0.5 rounded bg-red-600 text-white">
                 Live
